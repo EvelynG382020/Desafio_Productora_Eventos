@@ -1,7 +1,7 @@
 class Group < ApplicationRecord
     has_many :concerts, :dependent => :destroy
    
-    enum membersgender: [:man, :woman, :band]
+    enum membersgender: [:Man, :Woman, :Band]
 
     def to_s
         name

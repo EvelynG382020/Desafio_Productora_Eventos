@@ -2,13 +2,13 @@
 
 <h1>Concerts</h1>
 
-<table>
-  <thead>
+<table class="table mt-4">
+  <thead class="table table-dark">
     <tr>
-      <th>Public</th>
-      <th>Duration</th>
-      <th>Concert date</th>
-      <th>Group</th>
+      <th class="text-center">Public</th>
+      <th class="text-center">Duration</th>
+      <th class="text-center">Concert date</th>
+      <th class="text-center">Group</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +16,10 @@
   <tbody>
     <% @concerts.each do |concert| %>
       <tr>
-        <td><%= concert.public %> personas</td>
-        <td><%= concert.duration %> minutos</td>
-        <td><%= concert.concert_date %></td>
-        <td><%= concert.group.name %></td>
+        <td class="table-success"><%= concert.public %> personas</td>
+        <td class="text-center"><%= concert.duration %> minutos</td>
+        <td class="text-center"><%= concert.concert_date %></td>
+        <td class="text-center"><%= concert.group.name %></td>
         <td><%= link_to 'Show', concert %></td>
         <td><%= link_to 'Edit', edit_concert_path(concert) %></td>
         <td><%= link_to 'Destroy', concert, method: :delete, data: { confirm: 'Are you sure?' } %></td>

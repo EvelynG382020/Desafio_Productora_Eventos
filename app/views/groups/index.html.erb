@@ -3,10 +3,10 @@
 <h1>Groups</h1>
 
 <table class="table mt-4">
-  <thead class="table-light">
+  <thead class="table table-dark">
     <tr>
       <th class="text-center">Nombre</th>
-      <th class="text-center">Cantindad de Miembros</th>
+      <th class="text-center">Miembros</th>
       <th class="text-center">Conciertos</th>
       <th class="text-center">Asistentes Totales</th>
       <th class="text-center">Tipo de banda</th>
@@ -16,16 +16,16 @@
 
   <tbody>
     <% @groups.each do |group| %>
-      <tr>
-        <td class="table-warning"><%= group.name %></td>
-        <td class="text-center"><%= group.members %></td>
-        <td class="text-center"><%= group.total_concerts %></td> 
-        <td class="text-center"><%= group.attendance %></td>
-        <td class="text-center"><%= group.membersgender %></td>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <tr>
+          <td class="table-primary"><%= group.name %></td>
+          <td class="text-center"><%= group.members %></td>
+          <td class="text-center"><%= group.total_concerts %></td> 
+          <td class="text-center"><%= group.attendance %></td>
+          <td class="text-center"><%= group.membersgender %></td>
+          <td><%= link_to 'Show', group %></td>
+          <td><%= link_to 'Edit', edit_group_path(group) %></td>
+          <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
     <% end %>
   </tbody>
 </table>
