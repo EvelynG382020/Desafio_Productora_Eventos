@@ -18,6 +18,7 @@ class ConcertsController < ApplicationController
 
   # GET /concerts/1/edit
   def edit
+    @groups = Group.all
   end
 
   # POST /concerts 
